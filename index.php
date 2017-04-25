@@ -1,3 +1,4 @@
+<?php include 'calculate.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,7 @@
     <title>Title</title>
 </head>
 <body>
-
-<form action="calculate.php" method="post">
+<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
     <label for="number1">Number 1: </label>
     <input type="number" name="number1"><br>
     <label for="number2">Number 2: </label>
@@ -22,6 +22,13 @@
 
     <input type="submit" value="calculate">
 </form>
+
+<h1>Your result</h1>
+
+<?php
+echo $result . "<br/>";
+?>
+
 
 </body>
 </html>

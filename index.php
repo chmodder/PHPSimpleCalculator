@@ -1,4 +1,4 @@
-<?php include 'calculate.php'?>
+<?php include 'calculate.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +6,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="post">
+<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method="get">
     <label for="number1">Number 1: </label>
     <input type="number" name="number1"><br>
     <label for="number2">Number 2: </label>
@@ -14,10 +14,10 @@
 
     <label for="operator">Math operation</label>
     <select name="operator">
-        <option value="add">+</option>
+        <option value="add" selected>+</option>
         <option value="subtract">-</option>
         <option value="multiply">*</option>
-        <option value="divide" selected>/</option>
+        <option value="divide">/</option>
     </select>
 
     <input type="submit" value="calculate">
@@ -26,7 +26,7 @@
 <h1>Your result</h1>
 
 <?php
-echo $result . "<br/>";
+echo calculateNumbers($_GET["number1"], $_GET["number2"], $_GET["operator"]) . "<br/>";
 ?>
 
 

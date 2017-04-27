@@ -23,7 +23,7 @@ $twig = new Twig_Environment($loader, array(
     //'cache' => '/path/to/compilation_cache',
     'auto_reload' => true));
 
-$template = $twig->loadTemplate('resultView.html.twig');
+$template = $twig->loadTemplate('calculatorView.html.twig');
 
 $parametersToTwig = array("number1" => $num1, "number2" => $num2, "operator" => $operatorSymbol, "result" => $result);
 echo $template->render($parametersToTwig);

@@ -1,4 +1,30 @@
 <?php
+function getOperatorSymbol($operator)
+{
+    if (isset($operator))
+    {
+
+        switch ($operator)
+        {
+            case "add":
+                $operatorSym = "+";
+                break;
+            case "subtract":
+                $operatorSym = "-";
+                break;
+            case "multiply":
+                $operatorSym = "*";
+                break;
+            case "divide":
+                $operatorSym = "/";
+                break;
+        }
+    } else
+    {
+        $operatorSym = "";
+    }
+    return $operatorSym;
+}
 
 function calculateNumbers($number1, $number2, $operator)
 {
